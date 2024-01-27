@@ -24,7 +24,7 @@ body {
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        text-shadow: 0 0 12px #f494c3, 0 0 50px #f494c3, 0 0 100px #f494c3;
     }
     10%, 90%{
         color: #111;
@@ -120,7 +120,7 @@ body {
 }
 
 .btn {
-    --color: #5de3cd;
+    --color: #f494c3;
     position: relative;
     display: flex;
     justify-content: center;
