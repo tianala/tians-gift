@@ -1,5 +1,4 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <style>
+    .music-icon {
+      font-size: 40px; /* Adjust the size as needed */
+      color: #ec7ab5; /* Change the color to your preference */
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #dcd8d8; /* Background color for the circular shape */
+      border-radius: 50%; /* Create a circular shape */
+      padding: 12px; /* Adjust padding to control the size of the circle */
+      cursor: pointer;
+    }
+    .music-icon.paused:before {
+      content: "\1F507"; /* Unicode character for a stop sign */
+  }
+    
+</style>
     <title>flowers</title>
 </head>
 <body class="container">
@@ -308,16 +325,30 @@
         </div>
       </div>
     </div>
-
-    <audio id="backgroundMusic" loop autoplay>
-      <source src= "practice\music.mp3" type="audio/mp3">
+    <audio controls autoplay loop style="display: none;">
+      <source src="music.mp3" type="audio/mp3">
       Your browser does not support the audio element.
   </audio>
-  <audio>
-      <source src= "practice\music.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-  </audio>
+     <!-- Add the music icon -->
+     <i class="fas fa-music music-icon" onclick="toggleAudio()"></i>
 
-    <script src="main.js"></script>
+     <!-- ... your existing body content ... -->
+ 
+     <script src="main.js"></script>
+     <script>
+      // JavaScript function to toggle audio playback
+      function toggleAudio() {
+          var audio = document.querySelector('audio');
+          var musicIcon = document.querySelector('.music-icon');
+
+          if (audio.paused) {
+              audio.play();
+              musicIcon.classList.remove('paused');
+          } else {
+              audio.pause();
+              musicIcon.classList.add('paused');
+          }
+      }
+  </script>
   </body>
 </html>
