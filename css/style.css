@@ -185,23 +185,25 @@ body {
     filter: brightness(1.4);
   }
 
-@media screen and (max-width:600px){
-    .greetings{
-        display: block;
+  @media screen and (max-width: 480px) {
+    body {
+        padding: 20px; /* Add some padding to the body for better spacing */
+    }
+
+    .greetings {
         font-size: 1.8rem;
-        font-weight: 600;
         text-align: center;
     }
 
     .btn div {
         padding: 0.8rem; /* Adjust padding for smaller screens */
-      }
-    
-      .btn::before {
+    }
+
+    .btn::before {
         width: 95%; /* Adjust the width for smaller screens */
-      }
-    
-      .btn svg {
+    }
+
+    .btn svg {
         width: 20px; /* Adjust the width of the SVG for smaller screens */
-      }
+    }
 }
