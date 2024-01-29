@@ -208,7 +208,7 @@ body {
     }
 
     .music-icon {
-        font-size: 10px;
+        font-size: 20px; /* Adjust the font size for the music icon on smaller screens */
         top: 20px;
         right: 15px;
         padding: 8px;
