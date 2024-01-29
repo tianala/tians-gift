@@ -185,7 +185,7 @@ body {
     filter: brightness(1.4);
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     body {
         padding: 20px; /* Add some padding to the body for better spacing */
     }
@@ -205,5 +205,12 @@ body {
 
     .btn svg {
         width: 20px; /* Adjust the width of the SVG for smaller screens */
+    }
+
+    .music-icon {
+        font-size: 10px;
+        top: 20px;
+        right: 15px;
+        padding: 8px;
     }
 }
