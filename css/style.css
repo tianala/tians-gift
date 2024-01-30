@@ -192,7 +192,7 @@ body {
 
     .greetings {
         font-size: 2.8rem;
-        text-align: center;
+        text-align:justify;
     }
 
     .btn div {
