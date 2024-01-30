@@ -5,8 +5,8 @@
 
 body {
     color: azure;
-    width: 95%;
-    min-height: 95vh;
+    width: 97%;
+    min-height: 97vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +192,7 @@ body {
     }
 
     .greetings {
-        font-size: 5rem;
+        font-size: 2rem;
         text-align: center;
     }
 
