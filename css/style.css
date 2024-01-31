@@ -189,9 +189,9 @@ body {
   }
 
   @media screen and (max-width: 600px) {
-    body {
-        padding: 20px; /* Add some padding to the body for better spacing */
-    }
+    /* body {
+        padding: 20px; 
+    } */
 
     .greetings {
         font-size: 2rem;
