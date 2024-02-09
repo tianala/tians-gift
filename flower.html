@@ -329,6 +329,8 @@
       <source src="music.mp3" type="audio/mp3">
       Your browser does not support the audio element.
   </audio>
+
+  <img src="img/flowers.png" alt="Falling Image" id="fallingImage" style="position: absolute; display: none; width: 50px; height: 70px;">
      <!-- Add the music icon -->
      <i class="fas fa-music music-icon" onclick="toggleAudio()"></i>
 
@@ -349,6 +351,26 @@
               musicIcon.classList.add('paused');
           }
       }
+
+      document.addEventListener('click', function(event) {
+        var fallingImage = document.getElementById('fallingImage');
+        var rect = fallingImage.getBoundingClientRect();
+        var x = event.clientX;
+        var y = event.clientY;
+
+        // Set image position to where the screen was tapped
+        fallingImage.style.left = x - rect.width / 2 + 'px';
+        fallingImage.style.top = y - rect.height / 2 + 'px';
+        fallingImage.style.display = 'block';
+
+        // Add animation for the falling effect (optional)
+        fallingImage.classList.add('falling-animation');
+
+        // Remove the image after a certain duration (optional)
+        setTimeout(function() {
+            fallingImage.style.display = 'none';
+        }, 2000); // Adjust the duration as needed
+    });
   </script>
   </body>
 </html>
